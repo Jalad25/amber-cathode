@@ -10,7 +10,7 @@
 body { color-scheme: dark; }
 
 /* ============================================
-   THEME CSS VARIABLES
+   THEME CSS VARIABLES (default)
    ============================================ */
 body {
   /* ============================================
@@ -25,7 +25,7 @@ body {
   --amber-cathode-radius: 0;
 
   /* ============================================
-     COLOR PALETTE
+     AMBER COLOR PALETTE
      ============================================ */
   /* --- Backgrounds / blacks --- */
   --amber-cathode-black-deep: #060400;
@@ -86,6 +86,66 @@ body {
   --amber-cathode-rgb-accent-deep: 221, 149, 0;
   --amber-cathode-rgb-error-bg: 42, 16, 5;
   --amber-cathode-rgb-black: 0, 0, 0;
+}
+
+/* ============================================
+   GREEN PHOSPHOR PALETTE
+   ============================================ */
+body.amber-cathode-green {
+  /* --- Backgrounds / blacks --- */
+  --amber-cathode-black-deep: #000600;
+  --amber-cathode-black: #020802;
+  --amber-cathode-black-alt: #040a04;
+  --amber-cathode-bg-base: #040c05;
+  --amber-cathode-bg-form: #050e06;
+  --amber-cathode-bg-base-alt: #061107;
+
+  /* --- Dark green surfaces (interactive / modifiers) --- */
+  --amber-cathode-surface-900: #0a1a0a;
+  --amber-cathode-success-bg: #0d1a05;
+  --amber-cathode-pill-text: #0f2a0f;
+  --amber-cathode-surface-850: #11240f;
+
+  /* --- Borders --- */
+  --amber-cathode-border: #0f2a0f;
+  --amber-cathode-border-dim: #163a16;
+
+  /* --- Error backgrounds --- */
+  --amber-cathode-error-bg: #2a1005;
+  --amber-cathode-error-bg-hover: #3a1808;
+
+  /* --- Faint / muted greens --- */
+  --amber-cathode-faint: #2e6a20;
+  --amber-cathode-dim: #3a8a2a;
+  --amber-cathode-muted: #4ca044;
+  --amber-cathode-soft: #90d480;
+  --amber-cathode-text: #50e040;
+  --amber-cathode-bright-soft: #8cf06a;
+
+  /* --- Accent greens --- */
+  --amber-cathode-accent-deep: #33dd33;
+  --amber-cathode-accent: #44ff44;
+  --amber-cathode-accent-light: #8cff8c;
+
+  /* --- Heading color --- */
+  --amber-cathode-head-1: #44ff44;
+  --amber-cathode-head-2: #2aee2a;
+  --amber-cathode-head-3: #22dd33;
+  --amber-cathode-head-4: #1ecc2a;
+  --amber-cathode-head-5: #1abb22;
+  --amber-cathode-head-6: #16aa1e;
+
+  /* --- Status colors --- */
+  --amber-cathode-error: #ff6622;
+  --amber-cathode-error-hover: #ff8844;
+  --amber-cathode-success: #aacc00;
+
+  /* --- RGB glow triplets (used in rgba() glows/shadows) --- */
+  --amber-cathode-rgb-accent: 68, 255, 68;
+  --amber-cathode-rgb-warm: 0, 255, 80;
+  --amber-cathode-rgb-text: 80, 255, 60;
+  --amber-cathode-rgb-accent-light: 140, 255, 140;
+  --amber-cathode-rgb-accent-deep: 51, 221, 51;
 }
 
 /* ============================================
