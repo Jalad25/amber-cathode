@@ -7,8 +7,6 @@
    ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-body { color-scheme: dark; }
-
 /* ============================================
    THEME CSS VARIABLES (default)
    ============================================ */
@@ -376,9 +374,17 @@ body.amber-cathode-blue {
 }
 
 /* ============================================
+   THEME MODE
+   ============================================ */
+body {
+  color-scheme: dark;
+}
+
+/* ============================================
    TYPOGRAPHY
    ============================================ */
 body {
+  font-family: var(--amber-cathode-fonts);
   -webkit-font-smoothing: antialiased; 
   letter-spacing: 0.02em;
 }
@@ -477,7 +483,6 @@ body::after {
 .markdown-rendered h1, .cm-header-1, .markdown-rendered h2, .cm-header-2,
 .markdown-rendered h3, .cm-header-3, .markdown-rendered h4, .cm-header-4,
 .markdown-rendered h5, .cm-header-5, .markdown-rendered h6, .cm-header-6 {
-  font-family: var(--amber-cathode-fonts);
   letter-spacing: 0.04em;
 }
 .markdown-rendered h1, .cm-header-1 {
@@ -551,7 +556,6 @@ body::after {
 .setting-item-heading .setting-item-name,
 .workspace-leaf-content :is(h1, h2, h3, h4, h5, h6):not(.markdown-rendered *):not(.cm-header),
 .modal :is(h1, h2, h3, h4, h5, h6):not(.markdown-rendered *) {
-  font-family: var(--amber-cathode-fonts);
   font-weight: var(--amber-cathode-bold);
   text-transform: uppercase;
   letter-spacing: 0.04em;
