@@ -96,8 +96,8 @@ body {
   /* ============================================
      TYPOGRAPHY
      ============================================ */
-  --font-text-theme: "VT323", "IBM Plex Mono", "JetBrains Mono", "Courier New", monospace;
-  --font-monospace-theme: "VT323", "IBM Plex Mono", "JetBrains Mono", "Courier New", monospace;
+  --font-text-theme: var(--amber-cathode-fonts);
+  --font-monospace-theme: var(--amber-cathode-fonts);
   --font-text-size: 18px; 
   --line-height: 1.5;
 
@@ -231,7 +231,7 @@ body {
 .markdown-rendered h1, .cm-header-1, .markdown-rendered h2, .cm-header-2,
 .markdown-rendered h3, .cm-header-3, .markdown-rendered h4, .cm-header-4,
 .markdown-rendered h5, .cm-header-5, .markdown-rendered h6, .cm-header-6 {
-  font-family: "VT323", "IBM Plex Mono", "JetBrains Mono", "Courier New", monospace;
+  font-family: var(--amber-cathode-fonts);
   letter-spacing: 0.04em;
 }
 .markdown-rendered h1, .cm-header-1 {
