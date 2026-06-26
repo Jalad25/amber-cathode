@@ -7,7 +7,8 @@
    ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 body { color-scheme: dark; }
-.theme-dark {
+.theme-dark,
+.theme-light {
   --background-primary: #0c0a04; --background-primary-alt: #110e06;
   --background-secondary: #080602; --background-secondary-alt: #0a0804;
   --background-modifier-border: #2a2208; --background-modifier-form-field: #0e0c05;
@@ -28,27 +29,6 @@ body { color-scheme: dark; }
   --scrollbar-bg: rgba(0, 0, 0, 0); --scrollbar-thumb-bg: rgba(255, 176, 0, 0.1);
   --scrollbar-active-thumb-bg: rgba(255, 176, 0, 0.2);
   --highlight-mix-blend-mode: lighten;
-  --h1-color: #ffb000; --h2-color: #ee9900; --h3-color: #dd8800;
-  --h4-color: #cc7700; --h5-color: #bb6600; --h6-color: #aa5500;
-}
-.theme-light {
-  --background-primary: #0c0a04; --background-primary-alt: #110e06;
-  --background-secondary: #080602; --background-secondary-alt: #0a0804;
-  --background-modifier-border: #2a2208; --background-modifier-form-field: #0e0c05;
-  --background-modifier-form-field-highlighted: #1a1508;
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.6);
-  --background-modifier-cover: rgba(0, 0, 0, 0.75);
-  --text-normal: #e07828; --text-muted: #a06028; --text-faint: #6a4e14;
-  --text-on-accent: #0c0a04; --text-error: #ff6622; --text-error-hover: #ff8844;
-  --text-highlight-bg: rgba(255, 176, 0, 0.12);
-  --text-highlight-bg-active: rgba(255, 176, 0, 0.25);
-  --text-selection: rgba(255, 176, 0, 0.15);
-  --text-accent: #ffb000; --text-accent-hover: #ffc844;
-  --interactive-normal: #1a1508; --interactive-hover: #24200c;
-  --interactive-accent: #dd9500; --interactive-accent-rgb: 221, 149, 0;
-  --interactive-accent-hover: #ffb000; --interactive-success: #88aa00;
-  --scrollbar-bg: rgba(0, 0, 0, 0); --scrollbar-thumb-bg: rgba(255, 176, 0, 0.1);
-  --scrollbar-active-thumb-bg: rgba(255, 176, 0, 0.2);
   --h1-color: #ffb000; --h2-color: #ee9900; --h3-color: #dd8800;
   --h4-color: #cc7700; --h5-color: #bb6600; --h6-color: #aa5500;
 }
