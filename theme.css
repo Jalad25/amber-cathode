@@ -157,20 +157,17 @@ body {
 /* ============================================
    CRT CANVAS BASE BACKGROUND & TEXT
    ============================================ */
-body, .theme-light .workspace-leaf-content,
-.theme-light .markdown-source-view, .theme-light .markdown-reading-view {
+body, .workspace-leaf-content,
+.markdown-source-view, .markdown-reading-view {
   background-color: var(--amber-cathode-bg-base);
 }
-.theme-dark .markdown-rendered, .theme-dark .cm-s-obsidian,
-.theme-light .markdown-rendered, .theme-light .cm-s-obsidian {
+.markdown-rendered, .cm-s-obsidian {
   color: var(--amber-cathode-text);
   text-shadow: 0 0 4px rgba(var(--amber-cathode-rgb-text), 0.25);
 }
 body,
-.theme-dark .workspace-leaf-content,
-.theme-dark .markdown-source-view, .theme-dark .markdown-reading-view,
-.theme-light .workspace-leaf-content,
-.theme-light .markdown-source-view, .theme-light .markdown-reading-view {
+.workspace-leaf-content,
+.markdown-source-view, .markdown-reading-view {
   background-color: var(--amber-cathode-bg-base);
   background-image:
     radial-gradient(ellipse 65% 55% at 50% 50%, transparent 30%, rgba(var(--amber-cathode-rgb-black), 0.3) 60%, rgba(var(--amber-cathode-rgb-black), 0.7) 90%, rgba(var(--amber-cathode-rgb-black), 0.85) 100%),
@@ -192,16 +189,14 @@ body,
   60% { opacity: 1; } 61% { opacity: 0.92; } 62% { opacity: 1; }
   85% { opacity: 1; } 86% { opacity: 0.85; } 87% { opacity: 0.93; } 88% { opacity: 1; }
 }
-.theme-dark .markdown-reading-view, .theme-dark .markdown-source-view,
-.theme-light .markdown-reading-view, .theme-light .markdown-source-view {
+.markdown-reading-view, .markdown-source-view {
   animation: crt-flicker 6s infinite;
 }
 @keyframes crt-vsync {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(calc(100vh + 100%)); }
 }
-.theme-dark .markdown-reading-view::after, .theme-dark .markdown-source-view::after,
-.theme-light .markdown-reading-view::after, .theme-light .markdown-source-view::after {
+.markdown-reading-view::after, .markdown-source-view::after {
   content: '';
   position: fixed;
   top: 0;
@@ -487,23 +482,18 @@ body,
 /* ============================================
    SIDEBAR, NAV FILES & TABS
    ============================================ */
-.theme-dark .mod-left-split, .theme-dark .mod-left-split .workspace-leaf-content,
-.theme-dark .mod-left-split .workspace-tabs, .theme-dark .mod-left-split .workspace-tab-container,
-.theme-dark .mod-left-split .nav-files-container,
-.theme-light .mod-left-split, .theme-light .mod-left-split .workspace-leaf-content,
-.theme-light .mod-left-split .workspace-tabs, .theme-light .mod-left-split .workspace-tab-container,
-.theme-light .mod-left-split .nav-files-container {
+.mod-left-split, .mod-left-split .workspace-leaf-content,
+.mod-left-split .workspace-tabs, .mod-left-split .workspace-tab-container,
+.mod-left-split .nav-files-container {
   background-color: var(--amber-cathode-black-deep) !important;
   background-image: none !important;
 }
-.theme-dark .mod-left-split .workspace-tab-header-container,
-.theme-light .mod-left-split .workspace-tab-header-container {
+.mod-left-split .workspace-tab-header-container {
   background-color: var(--amber-cathode-black-deep) !important;
   background-image: none !important;
   border-bottom: 1px solid var(--amber-cathode-border);
 }
-.theme-dark .mod-left-split .workspace-tab-header.is-active,
-.theme-light .mod-left-split .workspace-tab-header.is-active {
+.mod-left-split .workspace-tab-header.is-active {
   background-color: var(--amber-cathode-bg-base) !important;
 }
 .nav-file-title, .nav-folder-title {
