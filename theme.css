@@ -769,7 +769,7 @@ body,
 /* ============================================
    IMAGES
    ============================================ */
-.markdown-rendered img {
+img {
   border-radius: 0;
   max-width: 100%;
   margin: 0.5em 0;
@@ -777,7 +777,7 @@ body,
   filter: var(--amber-cathode-img-filter);
   transition: opacity 0.4s ease, filter 0.4s ease;
 }
-.markdown-rendered img:hover { opacity: 1; filter: none; }
+img:hover { opacity: 1; filter: none; }
 .markdown-rendered .image-embed, .markdown-rendered p:has(> img) {
   position: relative;
   display: inline-block;
