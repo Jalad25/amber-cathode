@@ -290,8 +290,17 @@ body.amber-cathode-blue {
      ============================================ */
   --font-text-theme: var(--amber-cathode-fonts);
   --font-monospace-theme: var(--amber-cathode-fonts);
-  --font-text-size: 18px; 
+  --font-interface-theme: var(--amber-cathode-fonts);
+  --font-text-size: 18px;
   --line-height: 1.5;
+
+  /* ============================================
+     DIMENSIONS
+     ============================================ */
+  --radius-s: 0;
+  --radius-m: 0;
+  --radius-l: 0;
+  --radius-xl: 0;
 
   /* ============================================
      COLOR PALETTE
@@ -326,6 +335,17 @@ body.amber-cathode-blue {
   --interactive-accent-rgb: var(--amber-cathode-rgb-accent-deep);
   --interactive-accent-hover: var(--amber-cathode-accent);
   --interactive-success: var(--amber-cathode-success);
+  --background-modifier-hover: rgba(var(--amber-cathode-rgb-accent), 0.05);
+  --background-modifier-active-hover: rgba(var(--amber-cathode-rgb-accent), 0.08);
+  --background-secondary-alt: var(--amber-cathode-black-alt);
+  --nav-item-background-active: var(--amber-cathode-accent-deep);
+  --nav-item-color-active: var(--amber-cathode-bg-base);
+  --titlebar-background: var(--amber-cathode-black-deep);
+  --titlebar-background-focused: var(--amber-cathode-black-deep);
+  --titlebar-text-color: var(--amber-cathode-soft);
+  --ribbon-background: var(--amber-cathode-black-deep);
+  --status-bar-background: var(--amber-cathode-black-deep);
+  --tab-text-color-focused-active: var(--amber-cathode-accent);
   --scrollbar-bg: rgba(var(--amber-cathode-rgb-black), 0);
   --scrollbar-thumb-bg: rgba(var(--amber-cathode-rgb-accent), 0.1);
   --scrollbar-active-thumb-bg: rgba(var(--amber-cathode-rgb-accent), 0.2);
