@@ -5,6 +5,11 @@
    Author: Björn Kindler · kindler-webservices.de
    License: MIT
    ============================================ */
+/*
+@themepadd
+  host: github
+  repo: Jalad25/amber-cathode
+*/
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 /* ============================================
@@ -373,7 +378,6 @@ body.amber-cathode-blue {
   --h4-color: var(--amber-cathode-head-4);
   --h5-color: var(--amber-cathode-head-5);
   --h6-color: var(--amber-cathode-head-6);
-  --inline-title-weight: var(--amber-cathode-bold);
 }
 
 /* ============================================
@@ -475,6 +479,11 @@ body::after {
   z-index: 9997;
 }
 
+/* Theme PADD disabling */
+body.amber-cathode-no-scanlines::after { display: none; }
+body.amber-cathode-no-vsync .app-container::after { display: none; }
+body.amber-cathode-no-flicker .app-container::before { display: none; }
+
 /* ============================================
    EDITOR LAYOUT WIDTH & PADDING
    ============================================ */
@@ -495,17 +504,20 @@ body::after {
 .markdown-rendered h5, .cm-header-5, .markdown-rendered h6, .cm-header-6 {
   letter-spacing: 0.04em;
 }
-.markdown-rendered h1, .cm-header-1 {
+.markdown-rendered h1, .cm-header-1, .inline-title {
   font-weight: var(--amber-cathode-bold);
   font-size: 1.6em;
   color: var(--h1-color);
   text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(var(--amber-cathode-rgb-accent), calc(0.6 * var(--amber-cathode-glow))), 0 0 20px rgba(var(--amber-cathode-rgb-accent), calc(0.25 * var(--amber-cathode-glow))), 0 0 40px rgba(var(--amber-cathode-rgb-warm), calc(0.1 * var(--amber-cathode-glow)));
+}
+.markdown-rendered h1, .cm-header-1 {
   margin-top: 2em;
   margin-bottom: 0.3em;
   padding-bottom: 0.4em;
   border-bottom: 1px dashed var(--amber-cathode-faint);
-  text-shadow: 0 0 8px rgba(var(--amber-cathode-rgb-accent), calc(0.6 * var(--amber-cathode-glow))), 0 0 20px rgba(var(--amber-cathode-rgb-accent), calc(0.25 * var(--amber-cathode-glow))), 0 0 40px rgba(var(--amber-cathode-rgb-warm), calc(0.1 * var(--amber-cathode-glow)));
 }
+
 .markdown-rendered h2, .cm-header-2 {
   font-weight: var(--amber-cathode-bold);
   font-size: 1.35em;

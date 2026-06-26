@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "settingItems": [
+    {
+      "type": "group",
+      "heading": "Palette",
+      "items": [
+        {
+          "type": "control",
+          "name": "Phosphor palette",
+          "control": {
+            "type": "dropdown",
+            "id": "amber-cathode-palette",
+            "defaultValue": "",
+            "options": {
+              "": "Amber (P3)",
+              "amber-cathode-green": "Green (P1)",
+              "amber-cathode-white": "Paper White (P4)",
+              "amber-cathode-blue": "Blue-White (P7)"
+            },
+            "onChange": {
+              "action": "set-class-from-list",
+              "classes": [
+                "amber-cathode-green",
+                "amber-cathode-white",
+                "amber-cathode-blue"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "heading": "CRT Effects",
+      "items": [
+        {
+          "type": "control",
+          "name": "Phosphor glow",
+          "control": {
+            "type": "slider",
+            "id": "amber-cathode-glow",
+            "defaultValue": 0.5,
+            "min": 0,
+            "max": 8,
+            "step": 0.05,
+            "onChange": {
+              "action": "set-css-variable",
+              "name": "--amber-cathode-glow",
+              "clearMode": "default"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Disable CRT scanlines",
+          "control": {
+            "type": "toggle",
+            "id": "amber-cathode-no-scanlines",
+            "defaultValue": false,
+            "onChange": {
+              "action": "toggle-class",
+              "class": "amber-cathode-no-scanlines"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Disable CRT running line",
+          "control": {
+            "type": "toggle",
+            "id": "amber-cathode-no-vsync",
+            "defaultValue": false,
+            "onChange": {
+              "action": "toggle-class",
+              "class": "amber-cathode-no-vsync"
+            }
+          }
+        },
+        {
+          "type": "control",
+          "name": "Disable CRT flicker",
+          "control": {
+            "type": "toggle",
+            "id": "amber-cathode-no-flicker",
+            "defaultValue": false,
+            "onChange": {
+              "action": "toggle-class",
+              "class": "amber-cathode-no-flicker"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
