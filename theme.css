@@ -506,6 +506,23 @@ body,
 }
 
 /* ============================================
+   CHROME HEADINGS (settings, modals, panels)
+   ============================================ */
+.view-header-title,
+.modal-title,
+.setting-item-heading .setting-item-name,
+.workspace-leaf-content :is(h1, h2, h3, h4, h5, h6):not(.markdown-rendered *):not(.cm-header),
+.modal :is(h1, h2, h3, h4, h5, h6):not(.markdown-rendered *) {
+  font-family: var(--amber-cathode-fonts);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--amber-cathode-accent);
+  text-shadow: 0 0 5px rgba(var(--amber-cathode-rgb-accent), 0.4),
+               0 0 14px rgba(var(--amber-cathode-rgb-warm), 0.15);
+}
+
+/* ============================================
    LINKS
    ============================================ */
 .markdown-rendered a, .cm-url, .cm-hmd-internal-link {
