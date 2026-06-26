@@ -157,7 +157,7 @@ body {
 /* ============================================
    CRT CANVAS BASE BACKGROUND & TEXT
    ============================================ */
-.theme-light body, .theme-light .workspace-leaf-content,
+body, .theme-light .workspace-leaf-content,
 .theme-light .markdown-source-view, .theme-light .markdown-reading-view {
   background-color: var(--amber-cathode-bg-base);
 }
@@ -166,9 +166,10 @@ body {
   color: var(--amber-cathode-text);
   text-shadow: 0 0 4px rgba(var(--amber-cathode-rgb-text), 0.25);
 }
-.theme-dark body, .theme-dark .workspace-leaf-content,
+body,
+.theme-dark .workspace-leaf-content,
 .theme-dark .markdown-source-view, .theme-dark .markdown-reading-view,
-.theme-light body, .theme-light .workspace-leaf-content,
+.theme-light .workspace-leaf-content,
 .theme-light .markdown-source-view, .theme-light .markdown-reading-view {
   background-color: var(--amber-cathode-bg-base);
   background-image:
