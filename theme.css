@@ -24,6 +24,9 @@ body {
   --amber-cathode-scanline-gap: 2px;
   --amber-cathode-scanline-thickness: 1px;
   --amber-cathode-scanline-opacity: 0.15;
+  --amber-cathode-vsync-opacity: 0.3;
+  --amber-cathode-vsync-height: 18%;
+  --amber-cathode-vsync-speed: 9s;
   --amber-cathode-glow: 0.5;
   --amber-cathode-glow-text:  0 0 4px rgba(var(--amber-cathode-rgb-accent), calc(0.3 * var(--amber-cathode-glow)));
   --amber-cathode-glow-accent: 0 0 5px rgba(var(--amber-cathode-rgb-accent), calc(0.4 * var(--amber-cathode-glow)));
@@ -445,11 +448,18 @@ body,
   top: 0;
   left: 0;
   width: 100%;
-  height: 8%;
-  background: linear-gradient(to bottom, transparent, rgba(var(--amber-cathode-rgb-black), 0.07) 20%, rgba(var(--amber-cathode-rgb-black), 0.13) 40%, rgba(var(--amber-cathode-rgb-black), 0.15) 50%, rgba(var(--amber-cathode-rgb-black), 0.13) 60%, rgba(var(--amber-cathode-rgb-black), 0.07) 80%, transparent);
+  height: var(--amber-cathode-vsync-height);
+  background: linear-gradient(to bottom,
+    transparent,
+    rgba(var(--amber-cathode-rgb-black), calc(var(--amber-cathode-vsync-opacity) * 0.45)) 20%,
+    rgba(var(--amber-cathode-rgb-black), calc(var(--amber-cathode-vsync-opacity) * 0.85)) 40%,
+    rgba(var(--amber-cathode-rgb-black), var(--amber-cathode-vsync-opacity)) 50%,
+    rgba(var(--amber-cathode-rgb-black), calc(var(--amber-cathode-vsync-opacity) * 0.85)) 60%,
+    rgba(var(--amber-cathode-rgb-black), calc(var(--amber-cathode-vsync-opacity) * 0.45)) 80%,
+    transparent);
   pointer-events: none;
   z-index: 9999;
-  animation: crt-vsync 10s linear infinite;
+  animation: crt-vsync var(--amber-cathode-vsync-speed) linear infinite;
 }
 
 body::after {
