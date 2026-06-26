@@ -2,6 +2,8 @@
 
 An Obsidian dark theme inspired by 80s amber CRT monitors and BBS (Bulletin Board System) aesthetics.
 
+> Fork of [Amber Cathode](https://www.kindler-webservices.de) by Björn Kindler. See [LICENSE](LICENSE).
+
 ![Amber Cathode Screenshot](screenshot_full.png)
 
 ## Features
