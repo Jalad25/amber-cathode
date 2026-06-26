@@ -6,31 +6,112 @@
    License: MIT
    ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-body { color-scheme: dark; }
+body {
+  color-scheme: dark;
+
+  /* --- Backgrounds / blacks --- */
+  --amber-cathode-black-deep: #060400;
+  --amber-cathode-black: #080602;
+  --amber-cathode-black-alt: #0a0804;
+  --amber-cathode-bg-base: #0c0a04;
+  --amber-cathode-bg-form: #0e0c05;
+  --amber-cathode-bg-base-alt: #110e06;
+
+  /* --- Dark amber surfaces (interactive / modifiers) --- */
+  --amber-cathode-amber-900: #1a1508;
+  --amber-cathode-amber-success-bg: #1a1a05;
+  --amber-cathode-amber-pill-text: #2a1e08;
+  --amber-cathode-amber-850: #24200c;
+
+  /* --- Borders --- */
+  --amber-cathode-border: #2a2208;
+  --amber-cathode-border-dim: #3a2808;
+
+  /* --- Error backgrounds --- */
+  --amber-cathode-error-bg: #2a1005;
+  --amber-cathode-error-bg-hover: #3a1808;
+
+  /* --- Faint / muted ambers --- */
+  --amber-cathode-amber-faint: #6a4e14;
+  --amber-cathode-amber-dim: #8a5e10;
+  --amber-cathode-amber-muted: #a06028;
+  --amber-cathode-amber-soft: #d4a060;
+  --amber-cathode-amber-text: #e07828;
+  --amber-cathode-amber-bright-soft: #f0b848;
+
+  /* --- Accent ambers --- */
+  --amber-cathode-amber-accent: #dd9500;
+  --amber-cathode-amber: #ffb000;
+  --amber-cathode-amber-light: #ffc844;
+
+  /* --- Heading color --- */
+  --amber-cathode-head-1: #ffb000;
+  --amber-cathode-head-2: #ee9900;
+  --amber-cathode-head-3: #dd8800;
+  --amber-cathode-head-4: #cc7700;
+  --amber-cathode-head-5: #bb6600;
+  --amber-cathode-head-6: #aa5500;
+
+  /* --- Status colors --- */
+  --amber-cathode-error: #ff6622;
+  --amber-cathode-error-hover: #ff8844;
+  --amber-cathode-success: #88aa00;
+
+  /* --- Pure black --- */
+  --amber-cathode-print-black: #000;
+
+  /* --- RGB glow triplets (used in rgba() glows/shadows) --- */
+  --amber-cathode-rgb-amber: 255, 176, 0;
+  --amber-cathode-rgb-amber-warm: 255, 140, 0;
+  --amber-cathode-rgb-amber-text: 255, 140, 30;
+  --amber-cathode-rgb-amber-light: 255, 200, 68;
+  --amber-cathode-rgb-amber-accent: 221, 149, 0;
+  --amber-cathode-rgb-error-bg: 42, 16, 5;
+  --amber-cathode-rgb-black: 0, 0, 0;
+}
+
 .theme-dark,
 .theme-light {
-  --background-primary: #0c0a04; --background-primary-alt: #110e06;
-  --background-secondary: #080602; --background-secondary-alt: #0a0804;
-  --background-modifier-border: #2a2208; --background-modifier-form-field: #0e0c05;
+  --background-primary: #0c0a04;
+  --background-primary-alt: #110e06;
+  --background-secondary: #080602;
+  --background-secondary-alt: #0a0804;
+  --background-modifier-border: #2a2208;
+  --background-modifier-form-field: #0e0c05;
   --background-modifier-form-field-highlighted: #1a1508;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.6);
-  --background-modifier-success: #1a1a05; --background-modifier-error: #2a1005;
-  --background-modifier-error-rgb: 42, 16, 5; --background-modifier-error-hover: #3a1808;
+  --background-modifier-success: #1a1a05;
+  --background-modifier-error: #2a1005;
+  --background-modifier-error-rgb: 42, 16, 5;
+  --background-modifier-error-hover: #3a1808;
   --background-modifier-cover: rgba(0, 0, 0, 0.75);
-  --text-normal: #e07828; --text-muted: #a06028; --text-faint: #6a4e14;
-  --text-on-accent: #0c0a04; --text-error: #ff6622; --text-error-hover: #ff8844;
+  --text-normal: #e07828;
+  --text-muted: #a06028;
+  --text-faint: #6a4e14;
+  --text-on-accent: #0c0a04;
+  --text-error: #ff6622;
+  --text-error-hover: #ff8844;
   --text-highlight-bg: rgba(255, 176, 0, 0.12);
   --text-highlight-bg-active: rgba(255, 176, 0, 0.25);
   --text-selection: rgba(255, 176, 0, 0.15);
-  --text-accent: #ffb000; --text-accent-hover: #ffc844;
-  --interactive-normal: #1a1508; --interactive-hover: #24200c;
-  --interactive-accent: #dd9500; --interactive-accent-rgb: 221, 149, 0;
-  --interactive-accent-hover: #ffb000; --interactive-success: #88aa00;
-  --scrollbar-bg: rgba(0, 0, 0, 0); --scrollbar-thumb-bg: rgba(255, 176, 0, 0.1);
+  --text-accent: #ffb000;
+  --text-accent-hover: #ffc844;
+  --interactive-normal: #1a1508;
+  --interactive-hover: #24200c;
+  --interactive-accent: #dd9500;
+  --interactive-accent-rgb: 221, 149, 0;
+  --interactive-accent-hover: #ffb000;
+  --interactive-success: #88aa00;
+  --scrollbar-bg: rgba(0, 0, 0, 0);
+  --scrollbar-thumb-bg: rgba(255, 176, 0, 0.1);
   --scrollbar-active-thumb-bg: rgba(255, 176, 0, 0.2);
   --highlight-mix-blend-mode: lighten;
-  --h1-color: #ffb000; --h2-color: #ee9900; --h3-color: #dd8800;
-  --h4-color: #cc7700; --h5-color: #bb6600; --h6-color: #aa5500;
+  --h1-color: #ffb000;
+  --h2-color: #ee9900;
+  --h3-color: #dd8800;
+  --h4-color: #cc7700;
+  --h5-color: #bb6600;
+  --h6-color: #aa5500;
 }
 .theme-light body, .theme-light .workspace-leaf-content,
 .theme-light .markdown-source-view, .theme-light .markdown-reading-view {
