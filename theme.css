@@ -395,20 +395,28 @@ body,
    CRT EFFECTS
    ============================================ */
 @keyframes crt-flicker {
-  0% { opacity: 1; } 2% { opacity: 0.88; } 4% { opacity: 1; }
-  8% { opacity: 0.95; } 9% { opacity: 1; } 35% { opacity: 1; }
-  36% { opacity: 0.90; } 37% { opacity: 0.96; } 38% { opacity: 1; }
-  60% { opacity: 1; } 61% { opacity: 0.92; } 62% { opacity: 1; }
-  85% { opacity: 1; } 86% { opacity: 0.85; } 87% { opacity: 0.93; } 88% { opacity: 1; }
+  0% { opacity: 0; } 2% { opacity: 0.12; } 4% { opacity: 0; }
+  8% { opacity: 0.05; } 9% { opacity: 0; } 35% { opacity: 0; }
+  36% { opacity: 0.10; } 37% { opacity: 0.04; } 38% { opacity: 0; }
+  60% { opacity: 0; } 61% { opacity: 0.08; } 62% { opacity: 0; }
+  85% { opacity: 0; } 86% { opacity: 0.15; } 87% { opacity: 0.07; } 88% { opacity: 0; }
 }
-.markdown-reading-view, .markdown-source-view {
+.app-container::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgb(var(--amber-cathode-rgb-black));
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
   animation: crt-flicker 6s infinite;
 }
+
 @keyframes crt-vsync {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(calc(100vh + 100%)); }
 }
-.markdown-reading-view::after, .markdown-source-view::after {
+.app-container::after {
   content: '';
   position: fixed;
   top: 0;
@@ -417,7 +425,7 @@ body,
   height: 8%;
   background: linear-gradient(to bottom, transparent, rgba(var(--amber-cathode-rgb-black), 0.07) 20%, rgba(var(--amber-cathode-rgb-black), 0.13) 40%, rgba(var(--amber-cathode-rgb-black), 0.15) 50%, rgba(var(--amber-cathode-rgb-black), 0.13) 60%, rgba(var(--amber-cathode-rgb-black), 0.07) 80%, transparent);
   pointer-events: none;
-  z-index: 100;
+  z-index: 9999;
   animation: crt-vsync 10s linear infinite;
 }
 
@@ -434,7 +442,7 @@ body,
 .markdown-source-view, .markdown-rendered { padding: 24px 32px; }
 
 /* ============================================
-   HEADINGS
+   NOTE HEADINGS
    ============================================ */
 .markdown-rendered h1, .cm-header-1, .markdown-rendered h2, .cm-header-2,
 .markdown-rendered h3, .cm-header-3, .markdown-rendered h4, .cm-header-4,
