@@ -17,6 +17,12 @@ body {
      TYPOGRAPHY
      ============================================ */
   --amber-cathode-fonts: "VT323", "IBM Plex Mono", "JetBrains Mono", "Courier New", monospace;
+  --amber-cathode-uppercase: uppercase;
+
+  /* ============================================
+     DIMENSIONS
+     ============================================ */
+  --amber-cathode-radius: 0;
 
   /* ============================================
      COLOR PALETTE
