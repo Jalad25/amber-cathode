@@ -909,4 +909,5 @@ button.mod-cta:hover { background: var(--amber-cathode-accent); box-shadow: 0 0 
 @media print {
   .markdown-rendered { max-width: 100%; color: var(--amber-cathode-print-black); }
   .markdown-rendered a { color: var(--amber-cathode-print-black); text-decoration: underline; }
+  body::after { display: none; }
 }
